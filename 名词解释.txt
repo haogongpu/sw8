@@ -1,0 +1,23 @@
+login.html	登录页
+base.html	基本面板
+changepwd.html	修改密码
+userstatus.html	用户状态
+sysinfo.html	系统信息
+video.html	常用过滤-视频网站
+store.html	常用过滤-购物网站
+bbs.html	常用过滤-论坛
+addfilter.html	增加常用过滤类别
+addgroup.html	增加用户分组
+adduser.html	用户分组-增加组成员
+white.html	用户分组-白名单模式
+black.html	用户分组-黑名单模式
+disfilter.html	用户分组-免过滤
+BWlimit.html	用户分组-带宽限制
+Group-T.html	用户分组集合
+------------------------------------
+CSS全部没有入外链CSS文件
+除base.html里的css是在<head>，其他都是自己携带css段
+/JS/文件夹里是base.html基本面板左侧导航菜单的js库（仅仅在base.html文件中外链）
+/img/文件夹是base.html基本面板左侧导航菜单的img库（仅仅在base.html文件中外链）
+------------------------------------
+点用户分组和常用过滤会出错，要看就对其用新窗口打开

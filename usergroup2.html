@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8"/>
+<title>common</title>
+<style type="text/css">      /* 基本框架L-M-B */
+p,a,ul,li { font-family:"微软雅黑";}
+* { margin:2px; padding:2px;}
+body {
+    background-color: #A0CFF5;
+    background-repeat: no-repeat;
+    margin-left: 15%;
+    margin-top: 70px;
+    margin-right: 15%;
+    margin-bottom: 70px;
+}
+html,body { text-align:center;height:90%;}
+.side { position:relative; height:90%; background:#F5F5F5; overflow:hidden; width:200px; float:left; margin-right:3px; overflow:hidden;}
+.main { position:relative; overflow:auto; width:auto; height:90%; background:#EEEEEE;}
+.bottom { position:relative; height:25px; background:#FEFEFE;}
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<style media="screen" type="text/css">      /* 拉伸目录 */
+/* General Styles */
+* { margin:0; padding:0; border:0px none #FFFFFF; }
+* html ul ul li { margin-bottom:-1px; }
+* html ul ul li a, * html ul li a { height:100%; }
+a { color:#FFFFFF; text-decoration:underline; }
+code { padding:0.5em; border-top:1px solid #666666; border-right:1px solid #999999; border-bottom:1px solid #999999; border-left:1px solid #666666; margin:0.5em 0 0.5em 0; display:block; }
+h1 { margin:1em 0 0.5em 0; display:block; font-weight:normal; }
+h2 { border-top:1px solid #F0F0F0; padding-top:0.5em; margin:1em 0 1em 0; display:block; font-weight:normal; }
+/* Styles for Example #1 */
+#example1 { margin:0; padding:0; width:200px; list-style-type:none; line-height:120%; }
+#example1 .closed { background-image:url(img/ha-down.gif); }
+#example1 .closed, #example1 .opened { padding-right:10px; background-position:98% 50%; background-repeat:no-repeat; }
+#example1 .header { background-color:#EEEEEE; }
+#example1 .opened { background-image:url(img/ha-up.gif); }
+#example1 a { display:block; font-weight:bold; text-decoration:none; }
+#example1 a.hover { border-top:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; background-color:#EEEEEE; color:#FFFFFF; }
+#example1 ul { overflow: hidden; }
+#example1 li { margin:0; padding:0; list-style-type:none; background-color:#41A5D7; color:#FFFFFF; }
+#example1 li a { padding:2px 10px 2px 4px; border-top:1px solid #9A9A9A; border-left:1px solid #9A9A9A; border-right:1px solid #EEEEEE; border-bottom:1px solid #41A5D6; background-color:#41A5D7; color:#FFFFFF; }
+#example1 li.active a, #example1 li li.active a { border-top:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; border-left:1px solid #41A5D6; border-right:1px solid #9A9A9A; background-color:#404040; color:#FFFFFF; }
+#example1 li.active li a, #example1 li li a { padding:2px 4px 2px 8px; border-top:1px solid #EEEEEE; border-left:1px solid #EEEEEE; border-right:1px solid #8A8A8A; border-bottom:1px solid #EEEEEE; background-color:#41A5D6; color:#FFFFFF; }
+</style>
+<script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
+<script type="text/javascript" src="js/jquery.hoveraccordion.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Setup HoverAccordion for Example 1
+    $('#example1').hoverAccordion();
+});
+</script>
+<style type="text/css">      /* 圆角边框 */
+.xb1, .xb2, .xb3, .xb4, .xb5, .xb6, .xb7 {display:block; overflow:hidden; font-size:0;}
+.xb1, .xb2, .xb3, .xb4, .xb5, .xb6 {height:1px;}
+.xb4, .xb5, .xb6, .xb7 {background:#ccc; border-left:1px solid #fff; border-right:1px solid #fff;}
+.xb1 {margin:0 8px; background:#fff;}
+.xb2 {margin:0 6px; background:#fff;}
+.xb3 {margin:0 4px; background:#fff;}
+.xb4 {margin:0 3px; background:#EEEEEE; border-width:0 5px;}
+.xb5 {margin:0 2px; background:#EEEEEE; border-width:0 4px;}
+.xb6 {margin:0 2px; background:#EEEEEE; border-width:0 3px;} 
+.xb7 {margin:0 1px; background:#EEEEEE; border-width:0 3px; height:2px;} 
+</style>
+</head>
+<body>
+<b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b><b class="xb5"></b><b class="xb6"></b><b class="xb7"></b>
+<div class="side">
+    <p>控制面板</p>
+  <ul id="example1">
+    <li><a href="addfilter.html">常用过滤</a>
+      <ul>
+        <li><a href="video.html">视频网站</a></li>
+        <li><a href="store.html">购物网站</a></li>
+        <li><a href="bbs.html">论坛</a></li>
+      </ul>
+    <li><a href="addgroup.html">用户分组</a>
+      <ul>
+        <li><a href="usergroup1.html">财务</a></li>
+        <li><a href="usergroup2.html">行政</a></li>
+        <li><a href="usergroup3.html">销售</a></li>
+      </ul>
+    </li>
+    <li><a href="userstatus.html">用户状态</a></li>
+    <li><a href="changepwd.html">密码修改</a></li>
+    <li><a href="sysinfo.html">系统信息</a>
+    </li>
+  </ul>
+<br />
+</div>
+<div class="main">
+<p>编辑区域</p>
+<style type="text/css">      /* Tab选项卡 */
+a{font:"微软雅黑", Verdana, Arial, Helvetica, sans-serif; color:green; text-decoration:none;}
+a:hover{color:red;}
+.box{width:600px;height:380px;margin:auto;}
+.menu{font-family:"微软雅黑";	font-size:16px;color:#FFFFFF;height: 30px; overflow:hidden;}
+.menu ul{ margin:0px; padding:0px; list-style:none}
+.menu ul li{ float:left; background:#41A5D6; list-style:none;  line-height:40px; height:40px;margin-right:5px;  }
+.menu ul li a{ color:#FFFFFF;  display: inline-block;;  padding:0px 10px; line-height:40px;   }
+.menu ul li a:visited{ color:#FFFFFF}
+.menu ul li a:hover{ background:#666666;}
+.menu ul li a:active{ color:#FFFFFF}
+#tab_content{height:380px; background:#FFF; overflow:hidden; width:auto; }
+#t_1,#t_2{ height:380px; padding:5px;}
+table {font-family:微软雅黑;width:100%;}
+</style>
+
+<div class="box">
+  <div class="menu">
+    <ul>
+      <li><a href="#t_1">添加组成员</a></li>
+      <li><a href="#t_2">白名单模式</a></li>
+      <li><a href="#t_3">黑名单模式</a></li>
+      <li><a href="#t_4">免过滤</a></li>
+      <li><a href="#t_5">带宽限制</a></li>
+    </ul>
+  </div>
+  <div id="tab_content">
+            <div id="t_1">
+<style type="text/css">
+body { text-align:center;font-family:"微软雅黑",“宋体”}
+label,input,button,select,textarea{font-size:20px;font-weight:normal;}
+input,button,select,textarea{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
+input,textarea,select{display:inline-block;width:100px;height:18px;padding:4px;margin-bottom:9px;font-size:13px;line-height:18px;color:#555555;border:1px solid #cccccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+label input,label textarea,label select{display:block;}
+</style>
+
+<label>主机名：</label><input name="zname" type="text" />
+<label>主机IP：</label><input name="zip" type="text" /><br />
+<label>主机MAC地址：</label><input name="zmac" type="text" />
+ <input name="submit" type="submit" value="添加" style="width:100px;height:30px;"/><br />
+ <hr />
+<table width="100%" border="2" cellspacing="2px">
+  <tr>
+    <th bgcolor="#41A5D6" scope="col">组名称</th>
+    <th bgcolor="#41A5D6" scope="col">主机名</th>
+    <th bgcolor="#41A5D6" scope="col">主机IP</th>
+    <th bgcolor="#41A5D6" scope="col">主机MAC地址</th>
+    <th bgcolor="#41A5D6" scope="col">添加时间</th>
+    <th bgcolor="#41A5D6" scope="col">在线状态</th>
+  </tr>
+  <tr>
+    <td>行政</td>
+    <td>李四</td>
+    <td>192.168.253.200</td>
+    <td>00:0c:29:50:32:c5</td>
+    <td>2012/8/13 15:10</td>
+    <td>下线</td>
+  </tr>
+  <tr>
+    <td>行政</td>
+    <td>张三</td>
+    <td>192.168.253.100</td>
+    <td>00:0c:29:50:32:c6</td>
+    <td>2012/8/13 15:10</td>
+    <td>在线</td>
+  </tr>
+</table><br />
+<input align="left" style=" text-align:center;width:100px;height:30px;" name="del" type="submit" value="删除所选" />
+</div>
+            <div id="t_2">
+			<style type="text/css">
+body { text-align:center;font-family:"微软雅黑",“宋体”}
+label,input,button,select,textarea{font-size:20px;font-weight:normal;}
+input,button,select,textarea{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
+input,textarea,select{display:inline-block;width:100px;height:18px;padding:4px;margin-bottom:9px;font-size:13px;line-height:18px;color:#555555;border:1px solid #cccccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+label input,label textarea,label select{display:block;}
+</style>
+
+<label>域名/IP：</label><input name="zname" type="text" />
+<label>端口：</label><input name="zip" type="text" /><br />
+<label>说明：</label><input name="zmac" type="text" />
+ <input name="submit" type="submit" value="提交" style="width:150px;height:30px;"/><br />
+ <hr />
+<table width="100%" border="2" cellspacing="2px">
+  <tr>
+    <th bgcolor="#41A5D6" scope="col">域名/IP</th>
+    <th bgcolor="#41A5D6" scope="col">端口</th>
+    <th bgcolor="#41A5D6" scope="col">CIDR</th>
+    <th bgcolor="#41A5D6" scope="col">说明</th>
+    <th bgcolor="#41A5D6" scope="col">创建时间</th>
+  </tr>
+  <tr>
+    <td>google.cn</td>
+    <td>80</td>
+    <td>74.125.0.0/16</td>
+    <td>谷歌</td>
+    <td>2012/8/13 15:10</td>
+  </tr>
+  <tr>
+    <td>google.cn</td>
+    <td>80</td>
+    <td>220.181.0.0/16</td>
+    <td>百度</td>
+    <td>2012/8/13 15:10</td>
+  </tr>
+</table><br />
+<input align="left" style=" text-align:center;width:100px;height:30px;" name="del" type="submit" value="删除所选" /><br />
+<hr>
+<input align="left" style=" text-align:center;width:100px;height:30px;" name="del" type="submit" value="启动白名单模式" />
+			</div>
+            <div id="t_3">
+<style type="text/css">
+body { text-align:center;font-family:"微软雅黑",“宋体”}
+label,input,button,select,textarea{font-size:20px;font-weight:normal;}
+input,button,select,textarea{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
+input,textarea,select{display:inline-block;width:100px;height:18px;padding:4px;margin-bottom:9px;font-size:13px;line-height:18px;color:#555555;border:1px solid #cccccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+label input,label textarea,label select{display:block;}
+</style>
+
+<center<table width="400" border="0">
+  <tr>
+    <td><input style=" text-align:left;width:20px;height:0px;padding:0px;" name="" type="checkbox" value="" />开启-屏蔽IM聊天</td>
+    <td><input style=" text-align:left;width:20px;height:0px;padding:0px;" name="" type="checkbox" value="" />开启-屏蔽P2P</td>
+  </tr>
+</table></center>
+
+<hr />
+<label>域名/IP：</label><input name="zname" type="text" />
+<label>端口：</label><input name="zip" type="text" />
+<label>说明：</label><input name="zmac" type="text" /><br />
+ <input name="submit" type="submit" value="提交" style="text-align:center;width:100px;height:30px;"/>
+ <hr />
+<table width="100%" border="2" cellspacing="2px">
+  <tr>
+    <th bgcolor="#41A5D6" scope="col">域名/IP</th>
+    <th bgcolor="#41A5D6" scope="col">端口</th>
+    <th bgcolor="#41A5D6" scope="col">CIDR</th>
+    <th bgcolor="#41A5D6" scope="col">说明</th>
+    <th bgcolor="#41A5D6" scope="col">创建时间</th>
+  </tr>
+  <tr>
+    <td>google.cn</td>
+    <td>80</td>
+    <td>74.125.0.0/16</td>
+    <td>谷歌</td>
+    <td>2012/8/13 15:10</td>
+  </tr>
+  <tr>
+    <td>google.cn</td>
+    <td>80</td>
+    <td>220.181.0.0/16</td>
+    <td>百度</td>
+    <td>2012/8/13 15:10</td>
+  </tr>
+</table><br />
+<input align="left" style=" text-align:center;width:100px;height:30px;" name="del" type="submit" value="删除所选" /><br />
+<hr>
+<input align="left" style=" text-align:center;width:150px;height:30px;" name="del" type="submit" value="启动白名单模式" />
+</div>
+    <div id="t_4">
+<style type="text/css">
+body { text-align:center;font-family:"微软雅黑",“宋体”}
+label,input,button,select,textarea{font-size:20px;font-weight:normal;}
+input,button,select,textarea{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
+input,textarea,select{display:inline-block;width:100px;height:18px;padding:4px;margin-bottom:9px;font-size:13px;line-height:18px;color:#555555;border:1px solid #cccccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+label input,label textarea,label select{display:block;}
+</style>
+
+<label>免过滤组成员IP：</label><input name="cate" type="text" />
+<label>免过滤原因说明：</label><input name="desc" type="text" />
+ <input name="submit" type="submit" value="添加" style="width:100px;height:30px;"/><br />
+ <hr />
+ <table align="center" width="500" border="2" cellpadding="2px">
+  <tr>
+    <th bgcolor="#41A5D6" scope="col">主机名</th>
+    <th bgcolor="#41A5D6" scope="col">主机IP</th>
+    <th bgcolor="#41A5D6" scope="col">说明</th>
+    <th bgcolor="#41A5D6" scope="col">添加时间</th>
+  </tr>
+  <tr>
+    <th scope="col"><input name="v1" type="checkbox" id="v1" style=" text-align:left;width:20px;height:0px;padding:0px;" value="1" />张三</th>
+    <th scope="col">192.168.253.200</th>
+    <th scope="col">总管临时</th>
+    <th scope="col">2012/8/16 11:11</th>
+  </tr>
+  <tr>
+    <th scope="col"><input style=" text-align:left;width:20px;height:0px;padding:0px;" name="" type="checkbox" value="" />李四</th>
+    <th scope="col">192.168.253.100</th>
+    <th scope="col">业务需要</th>
+    <th scope="col">2012/8/16 11:11</th>
+  </tr>
+</table><br />
+<input align="left" style=" text-align:center;width:100px;height:30px;" name="del" type="submit" value="删除所选" />
+</div>
+    <div id="t_5">
+<style type="text/css">
+body { text-align:center;font-family:"微软雅黑",“宋体”}
+label,input,button,select,textarea{font-size:20px;font-weight:normal;}
+input,button,select,textarea{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
+input,textarea,select{display:inline-block;width:100px;height:18px;padding:4px;margin-bottom:9px;font-size:13px;line-height:18px;color:#555555;border:1px solid #cccccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+label input,label textarea,label select{display:block;}
+</style>
+
+<label>该组总带宽：</label><input name="cate" type="text" />
+ <input name="submit" type="submit" value="添加" style="width:100px;height:30px;"/><br />
+ <hr />
+ <table align="center" width="500" border="2" cellpadding="2px">
+  <tr>
+    <th bgcolor="#41A5D6" scope="col">组名称</th>
+    <th bgcolor="#41A5D6" scope="col">组总带宽(Mbps)</th>
+    <th bgcolor="#41A5D6" scope="col">添加时间</th>
+  </tr>
+  <tr>
+    <th scope="col"><input name="v1" type="checkbox" id="v1" style=" text-align:left;width:20px;height:0px;padding:0px;" value="1" />财务</th>
+    <th scope="col">10.0</th>
+    <th scope="col">2012/8/16 11:11</th>
+  </tr>
+  <tr>
+    <th scope="col"><input style=" text-align:left;width:20px;height:0px;padding:0px;" name="" type="checkbox" value="" />销售</th>
+    <th scope="col">9.0</th>
+    <th scope="col">2012/8/16 11:11</th>
+  </tr>
+</table><br />
+<input align="left" style=" text-align:center;width:100px;height:30px;" name="del" type="submit" value="删除所选" />
+</div>
+          </div>
+</div>
+<br />
+</div>
+<div class="bottom">
+<p>© 富康软件 2012</p>
+</div>
+<b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b>
+</body>
+</html>
